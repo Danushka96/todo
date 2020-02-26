@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="foo" uuid="8b6fdbc3-630a-42d7-8dae-f277762e4af2">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Danushka Herath\Documents\electron-go-todo\api\foo.db</jdbc-url>
+    </data-source>
+  </component>
+</project>
