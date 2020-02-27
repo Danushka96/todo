@@ -23,11 +23,5 @@ func CreateTable(t Models.Table) bool {
 		log.Printf("%q: %s\n", err, queryString)
 		return false
 	}
-	defer func() {
-		err := db.Close()
-		if err != nil {
-			log.Fatal(err)
-		}
-	}()
 	return true
 }

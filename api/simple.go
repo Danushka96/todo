@@ -2,10 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/danushka96/gowork/SQL"
 	"github.com/danushka96/gowork/SQL/Connection"
-	"github.com/danushka96/gowork/SQL/Const"
-	"github.com/danushka96/gowork/SQL/Models"
+	"github.com/danushka96/gowork/SQL/Migrations"
 	_ "github.com/mattn/go-sqlite3"
 	"os"
 )
@@ -111,20 +109,5 @@ func main() {
 	//if err != nil {
 	//	log.Fatal(err)
 	//}
-	table := Models.New("table1")
-	tableField1 := Models.TableField{
-		Name:     "id",
-		DataType: Const.Varchar,
-		NotNull:  true,
-		PrimaryKey: true,
-	}
-	tableField2 := Models.TableField{
-		Name:     "name",
-		DataType: Const.Varchar,
-		NotNull:  true,
-		PrimaryKey: false,
-	}
-	table.SetTableFields(tableField1)
-	table.SetTableFields(tableField2)
-	SQL.CreateTable(table)
+	Migrations.Seed()
 }
